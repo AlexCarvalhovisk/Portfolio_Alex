@@ -1,0 +1,479 @@
+/*ESTILO GERAL DO SITE e apliquei o border-box para que tudo fique dentro da mesma caixa*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*Por quanto tenho que usar essa bosta aqui ate resolver o probelma que deve ser as imagens*/
+
+}
+
+  /*Estilo geral da fonte do site*/
+  .noto-serif- {
+  font-family: Noto Serif, serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+  }
+
+/*No corpo da página apliquei tamanho, pois com o 100vh ele toma o espaço total da tela e apliquei a cor*/
+body{
+  background-color: black;
+  height: auto; /*mudei aqui de 100vh para auto, pois a cor do fundo não pegava por completo na página*/
+
+}
+
+/*Na página central apliquei largura máxima e margens automáticas*/
+.interface{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.universal-flex{
+  display: flex;
+}
+
+/*Estilo geral para botões da página*/
+.btn-contato button{
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: darkorange;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+h2.titulo{
+  color: white;
+  font-size: 48px;
+  text-align: center;
+}
+
+h2.titulo span{
+  color: darkorange;
+}
+
+/*Essa é a estilização dos botões para dar o efeito de sombreado*/
+button:hover, form .btn-enviar input:hover{
+  box-shadow: 0px 0px 8px darkorange;
+  transform: scale(1.05);
+}
+
+/*Apliquei espaçamento e estilo do cabeçalho*/
+header{
+  padding: 80px 4%;
+}
+
+/*Na classe interface apliquei display para tudo estar no mesmo componente, alinhei e criei maximo de espaços entre os objetos da tela*/
+header > .interface{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*Nos links apliquei a cor branca, tirei o sublinhado apliquei o display para gerar mais propriedades*/
+header a{
+  color: #777575;
+  text-decoration: none;
+  display: inline-block;
+  transition: .2s;
+}
+
+/*Aqui ao passar o mouse os elementes ficam brancos, aparece a mãozinha e o transform dá zoom*/
+header a:hover{
+  color: white;
+  transform: scale(1.2);
+}
+
+/*Removi as bolinhas das listas*/
+header nav ul{
+  list-style-type: none;
+  font-size: 22px;
+}
+
+/*Deixei a lista uma ao lado da outra e apliquei espaço*/
+header nav ul li{
+  display: inline-block;
+  padding: 0 40px;
+}
+
+.btn-contato button:hover{
+  box-shadow: 0px 0px 8px darkorange;
+  transform: scale(1.05);
+}
+
+/*Aqui apliquei a estilizações de todos os botões de links do LinkedIn e GitHub*/
+.btn-social button{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: darkorange;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 3px;
+  transition: .2s;
+}
+
+/*ESTILO GERAL DO TOPO DO SITE*/
+section.topo-site{
+  padding: 40px 4%;
+}
+
+/*Aqui nessa sessão eu alinhei um item ao lado do outro como fotos e dei um repito para o texto e imagem não ficar colado*/
+section.topo-site .universal-flex{
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.topo-site h1{
+  color: white;
+  font-size: 60px;
+  line-height: 50px;
+}
+
+.topo-site .esquerdo-txt-topo-site h1 span{
+  color: darkorange;
+}
+
+.topo-site .esquerdo-txt-topo-site p{
+  color: white;
+  margin: 40px 0;
+  font-size: 18px;
+  text-align: justify;
+}
+
+/*Chamei a position relative, pois para funcionar não pode ser static, apliquei a animação para levar 2", apliquei velocidade,
+tambem apliquei velocidade a animação, ou seja, ela fica suave, rápiada e suave novamente a movimentação, por fim apliquei
+movimentação infinita e alternativa*/
+.topo-site .direito-img-topo-site img{
+  position: relative;
+  animation: imagem-flutuante 2s ease-in-out infinite alternate;
+}
+
+/*Aqui adiciono a animação e regulo o tamanho do movimento*/
+@keyframes imagem-flutuante {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+/*ESTILO GERAL DAS ESPECIALIDADES*/
+section.especialidades{
+  padding: 40px 4%;
+  text-align: justify;
+}
+
+section.especialidades .universal-flex{
+  gap: 60px;
+}
+
+.especialidades .especialidades-box{
+  border-radius: 20px;
+  color: white;
+  padding: 40px;
+  margin-top: 45px;
+  transition: .3s;
+}
+
+.especialidades .especialidades-box:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.34);
+}
+
+.especialidades .especialidades-box i{
+  font-size: 60px;
+  color: darkorange;
+}
+
+.especialidades .especialidades-box h3{
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+/*ESTILO GERAL DO SOBRE*/
+
+/*O padding e para organizar o texto se a tela for menor*/
+section.sobre{
+  padding: 80px 4%;
+}
+
+section.sobre .universal-flex{
+  align-items: center;
+  gap: 60px;
+}
+
+.sobre .direito-txt-sobre{
+  color: white;
+}
+
+.sobre .direito-txt-sobre h2{
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+/*Aqui alterei a cor do texto e converti o span para block para ele mexer para linha debaixo, pois nativamente ele é inline.*/
+.sobre .direito-txt-sobre h2 span{
+  color: darkorange;
+  display: block;
+}
+
+.sobre .direito-txt-sobre p{
+  margin: 20px 0;
+  text-align: justify;
+}
+
+.img-sobre img{
+  border-radius: 35px;
+}
+
+/*ESTILO GERAL DO PORTFOLIO*/
+/*Aqui apliquei as bordas em cima e em baixo, e dei um sombreado de ajustei o sombreado da div*/
+section.portfolio{
+  padding: 80px 4%;
+  /*apliquei 0px para deslocamento horizontal, o mesmo par vertical, dei um desfoque de 40px, espalhamento de 10px e dei cor*/
+  box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.11);
+}
+
+/*Aqui é onde eu estou separando as 3 img-port, por isso, usei justf-content que já faz sozinho, mas poderia usar o gap para gerar o respiro*/
+section.portfolio .universal-flex{
+  justify-content: space-around;
+  /*gap: 80px;*/
+  margin-top: 60px;
+}
+
+/*Aqui eu tô ajustando a imagem, o cover ajusta ela dentro do espaço, o backposition é o eixo X, o outro é Y */
+.img-port{
+  width: 360px;
+  height: 360px;
+  background-color: darkorange;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 2s;
+  cursor: pointer;
+  border-radius: 35px;
+  position: relative;
+}
+
+/*Aqui ajustei os efeitos da posição da imagem para transição*/
+.img-port:hover{
+  background-position: 100% 100%;
+}
+
+/*Tive que fazer isso para que essa classe trabalhe somente dentro do img-port, para ajustar o texto apliquei diplay flex*/
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.84);
+  border-radius: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: darkorange;
+  opacity: 0;
+  transition: .5s;
+}
+
+/*Aqui eu trato a opacidade dos projetos*/
+.overlay:hover{
+  opacity: 1;
+}
+
+/*ESTILO DO FORMULÁRIO*/
+section.formulario{
+  padding: 80px 4%;
+  box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.11);
+}
+
+/*Aqui no form eu delimitei o tamanho dele para qualquer tela, centralizei e deixei em modo de coluna para exibição*/
+form{
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+form input, form textarea{
+  width: 100%;
+  background-color: rgba(255, 140, 0, 0.47);
+  border: none;
+  outline: none;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+form input::placeholder{
+  color: black;
+}
+
+form textarea::placeholder{
+  color: black;
+}
+
+/*Aqui não permito que fiquem redimencionando o textarea, */
+form textarea{
+  resize: none;
+  max-height: 250px;
+}
+
+form .btn-enviar{
+  margin-top: 20px;
+  text-align: center;
+}
+
+form .btn-enviar input{
+  width: 120px;
+  background-color: darkorange;
+  color: black;
+  font-weight: bold;
+  transition: .2s;
+}
+
+/*ESTILO GERAL RODAPÉ*/
+
+footer{
+  padding: 60px 4%;
+  box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.11);
+}
+
+/*Aqui apliquei a separação dos botões com o logo para que cada um fique na extremidade da tela.*/
+footer .universal-flex{
+  justify-content: space-between;
+}
+
+footer .linha-footer{
+  padding: 20px 0;
+}
+
+.borda{
+  border-top: 2px solid darkorange;
+}
+
+footer .linha-footer p i{
+  color: darkorange;
+  font-size: 22px;
+}
+
+footer .linha-footer p a{
+  color: white;
+  margin-left: 5px;
+}
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 1024px) {
+
+  /*Ajuste de classes gerais*/
+
+  .universal-flex{
+    flex-direction: column;
+  }
+
+  h2.titulo{
+    font-size: 34px;
+    line-height: 30px;
+  }
+
+  /*Ajuste de Cabeçalho*/
+  .meu-desktop, .btn-contato{
+    display: none;
+  }
+
+  /*Ajuste do topo do site*/
+
+  section.topo-site .universal-flex{
+    gap: 40px;
+  }
+
+  section.topo-site{
+    padding: 20px 8%;
+  }
+
+  .topo-site h1{
+    font-size: 32px;
+  }
+
+  .topo-site .direito-img-topo-site img{
+    width: 100%;
+  }
+
+  /*Sessão Especialidades*/
+  section.especialidades{
+    padding: 40px 8%;
+  }
+
+  /*Sessão Portfolio*/
+
+  section.portfolio{
+    padding: 80px 8%;
+  }
+
+  /*Sessão Sobre*/
+  section.sobre{
+    padding: 20px 8%;
+  }
+
+  .sobre .universal-flex{
+    flex-direction: column-reverse;
+  }
+
+  .sobre .direito-txt-sobre h2{
+    font-size: 34px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  .btn-social{
+    text-align: center;
+  }
+
+  .img-sobre img{
+    width: 100%;
+    border-radius: 35px;
+  }
+
+  .img-port{
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  section.portfolio .universal-flex{
+    gap: 60px;
+  }
+
+  /*Rodapé*/
+
+  footer .universal-flex{
+    flex-direction: column;
+  }
+
+  footer .linha-footer{
+    text-align: center;
+  }
+
+  footer .universal-flex{
+    gap: 30px;
+  }
+}
+
+
+
