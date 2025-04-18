@@ -82,7 +82,7 @@ header a{
 }
 
 /*Aqui ao passar o mouse os elementes ficam brancos, aparece a mãozinha e o transform dá zoom*/
-header a:hover{
+header nav.menu-desktop a:hover{
   color: white;
   transform: scale(1.2);
 }
@@ -94,9 +94,66 @@ header nav ul{
 }
 
 /*Deixei a lista uma ao lado da outra e apliquei espaço*/
-header nav ul li{
+header nav.menu-desktop ul li{
   display: inline-block;
   padding: 0 40px;
+}
+
+/*ESTILO MENU MOBILE*/
+
+/*Ajuste menu hamburguer*/
+.btn-menu-hamburguer i{
+  color: darkorange;
+  font-size: 45px;
+}
+
+/*Aqui apliquei o tamanho do meu, ajustei posição e index para sobrepor os outros elementos*/
+.menu-mobile{
+  background-color: black;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+}
+
+.menu-mobile .btn-fechar{
+  padding: 10px 4%;
+}
+
+.menu-mobile .btn-fechar i{
+  color: darkorange;
+  font-size: 30px;
+}
+
+.menu-mobile nav ul{
+  text-align: right;
+}
+
+.menu-mobile nav ul li a{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px 8%;
+  display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+  background-color: darkorange;
+  color: black;
+}
+
+.overlay-menu-mobile{
+  background-color: rgba(0, 0, 0, 0.73);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
 }
 
 .btn-contato button:hover{
@@ -132,7 +189,8 @@ section.topo-site .universal-flex{
 .topo-site h1{
   color: white;
   font-size: 60px;
-  line-height: 50px;
+  line-height: 65px;
+
 }
 
 .topo-site .esquerdo-txt-topo-site h1 span{
@@ -215,7 +273,7 @@ section.sobre .universal-flex{
 
 .sobre .direito-txt-sobre h2{
   font-size: 40px;
-  line-height: 40px;
+  line-height: 45px;
   margin-bottom: 30px;
 }
 
@@ -383,32 +441,34 @@ footer .linha-footer p a{
 
   /*Ajuste de classes gerais*/
 
+  /*Essa classe define a direção que ficam os elementos na tela*/
   .universal-flex{
     flex-direction: column;
   }
 
   h2.titulo{
-    font-size: 34px;
+    font-size: 35px;
     line-height: 30px;
   }
 
   /*Ajuste de Cabeçalho*/
-  .meu-desktop, .btn-contato{
+  .menu-desktop, .btn-contato{
     display: none;
   }
 
   /*Ajuste do topo do site*/
 
   section.topo-site .universal-flex{
-    gap: 40px;
+    gap: 5px;
   }
 
   section.topo-site{
-    padding: 20px 8%;
+    padding: 15px 8%;
   }
 
   .topo-site h1{
-    font-size: 32px;
+    font-size: 40px;
+    line-height: 35px;
   }
 
   .topo-site .direito-img-topo-site img{
@@ -418,6 +478,15 @@ footer .linha-footer p a{
   /*Sessão Especialidades*/
   section.especialidades{
     padding: 40px 8%;
+  }
+
+  section.especialidades .universal-flex{
+    gap: 3px;
+  }
+
+  .especialidades .especialidades-box:hover{
+    transform: none;
+    box-shadow: none;
   }
 
   /*Sessão Portfolio*/
@@ -436,7 +505,7 @@ footer .linha-footer p a{
   }
 
   .sobre .direito-txt-sobre h2{
-    font-size: 34px;
+    font-size: 35px;
     line-height: 35px;
     text-align: center;
   }
@@ -457,13 +526,14 @@ footer .linha-footer p a{
   }
 
   section.portfolio .universal-flex{
-    gap: 60px;
+    gap: 20px;
   }
 
   /*Rodapé*/
 
   footer .universal-flex{
     flex-direction: column;
+
   }
 
   footer .linha-footer{
@@ -471,7 +541,7 @@ footer .linha-footer p a{
   }
 
   footer .universal-flex{
-    gap: 30px;
+    gap: 20px;
   }
 }
 
