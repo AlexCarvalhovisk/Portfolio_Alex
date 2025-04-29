@@ -26,10 +26,11 @@
           </div><!--Encerra a logo-->
           <nav class="menu-desktop">
             <ul>
-              <li><a href="#">Início</a></li>
-              <li><a href="#">Quem eu sou?</a></li>
-              <li><a href="#">Especialidades</a></li>
-              <li><a href="#">Projetos</a></li>
+              <li><a href="#titulo01">Início</a></li>
+              <li><a href="#titulo02">Especialidades</a></li>
+              <li><a href="#titulo03">Meu portfolio</a></li>
+              <li><a href="#titulo04">Quem eu sou?</a></li>
+
             </ul>
           </nav><!--Encerra a meu-desktop-->
           <div class="btn-contato">
@@ -37,10 +38,10 @@
               <button>Contato</button>
             </a>
           </div><!--Encerra o btn-contato-->
-          <div class="btn-menu-hamburguer">
+          <div class="btn-menu-hamburguer" [id]="btnMenu">
             <i class="bi bi-list-nested"></i>
           </div><!--Encerra o btn-menu-hamburguer-->
-          <div class="menu-mobile">
+          <div class="menu-mobile" id="menu-mobile">
             <div class="btn-fechar">
               <i class="bi bi-x-octagon"></i>
             </div><!--Encerra o btn-fechar-->
@@ -49,12 +50,12 @@
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Quem eu sou?</a></li>
                 <li><a href="#">Especialidades</a></li>
-                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Meus Projetos</a></li>
                 <li><a href="#">Contato</a></li>
               </ul>
             </nav>
           </div><!--Encerra o menu-mobile-->
-          <div class="overlay-menu-mobile">
+          <div class="overlay-menu-mobile" [id]="overlayMenuMobile">
 
           </div><!--Encerra o overlay-menu-mobile-->
         </div><!--Encerra a interface-->
@@ -64,7 +65,7 @@
           <div class="interface">
             <div class="universal-flex">
               <div class="esquerdo-txt-topo-site">
-                <h1><span>Transformo ideias</span> em negócios para quem vê além do código<span>.</span></h1>
+                <h1 id="titulo01"><span>Transformo ideias</span> em negócios para quem vê além do código<span>.</span></h1>
                 <p>Sistematizo emoções, visões e empreendimentos em aplicações que fazem sentido.
                   Não desenvolvo apenas sistemas, torno experiências em códigos que inspiram e trazem resultados positivos.
                   Onde muitos veem apenas dificuldades, eu vejo oportunidades para escrever uma grande histórias.</p>
@@ -81,7 +82,7 @@
 
         <section class="especialidades">
           <div class="interface">
-            <h2 class="titulo">Minhas <span>especialidades.</span></h2>
+            <h2 id="titulo02" class="titulo">Minhas <span>especialidades.</span></h2>
             <div class="universal-flex">
               <div class="especialidades-box">
                 <i class="bi bi-pc-display"></i>
@@ -109,7 +110,7 @@
         </section><!--Encerra a sessão-->
         <section class="portfolio">
           <div class="interface">
-            <h2 class="titulo">Meu <span>portfolio.</span></h2>
+            <h2 id="titulo03" class="titulo">Meu <span>portfolio.</span></h2>
             <div class="universal-flex">
               <div class="img-port" style="background-image: url(assets/PrevisaoTempo.png);">
                 <div class="overlay">API de Previsão do tempo.</div>
@@ -131,7 +132,7 @@
                 <img src="assets/EuBacana.png" alt="Minha foto de perfil." style="height: 500px;">
               </div><!--Encerra img-sobre-->
               <div class="direito-txt-sobre">
-                <h2>Muito prazer, me chamo <span>Alex Carvalho.</span></h2>
+                <h2 id="titulo04">Muito prazer, me chamo <span>Alex Carvalho.</span></h2>
                   <p>Sou Alex, graduando em Análise e Desenvolvimento de Sistemas pelo Instituto Federal do Rio Grande do Sul (IFRS).
                     Possuo conhecimentos em diversas linguagens de programação, incluindo Java, C#, Delphi e Dart,
                     além de experiência no uso de frameworks como Angular, Spring Boot, .NET, VCL e Flutter

@@ -1,20 +1,24 @@
 /*ESTILO GERAL DO SITE e apliquei o border-box para que tudo fique dentro da mesma caixa*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /*Por quanto tenho que usar essa bosta aqui ate resolver o probelma que deve ser as imagens*/
-
 }
 
-  /*Estilo geral da fonte do site*/
-  .noto-serif- {
-  font-family: Noto Serif, serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings: "width" 100;
-  }
+html{
+  scroll-behavior: smooth;
+}
+
+/*Estilo geral da fonte do site*/
+.noto-serif- {
+font-family: Noto Serif, serif;
+font-optical-sizing: auto;
+font-weight: 600;
+font-style: normal;
+font-variation-settings: "width" 100;
+}
 
 /*No corpo da página apliquei tamanho, pois com o 100vh ele toma o espaço total da tela e apliquei a cor*/
 body{
@@ -117,6 +121,15 @@ header nav.menu-desktop ul li{
   z-index: 99999;
   width: 0%;
   overflow: hidden;
+  transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+  width: 60%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu-mobile{
+  display: block;
 }
 
 .menu-mobile .btn-fechar{
@@ -136,7 +149,7 @@ header nav.menu-desktop ul li{
   color: white;
   font-size: 20px;
   font-weight: 300;
-  padding: 10px 8%;
+  padding: 15px 8%;
   display: block;
 }
 
