@@ -313,6 +313,11 @@ section.portfolio{
   box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.11);
 }
 
+a{
+  color: darkorange;
+  text-decoration: none;
+}
+
 /*Aqui é onde eu estou separando as 3 img-port, por isso, usei justf-content que já faz sozinho, mas poderia usar o gap para gerar o respiro*/
 section.portfolio .universal-flex{
   justify-content: space-around;
