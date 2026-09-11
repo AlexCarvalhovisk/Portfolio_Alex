@@ -8,392 +8,263 @@
     <!-- LOGO -->
     <div class="logo">
       <a href="#inicio" aria-label="Ir para o início">
-        <img
-          src="assets/EuBacanaTransparente.png"
-          alt="Alex Carvalho - Desenvolvedor de Software"
-        >
+        <img src="assets/EuBacanaTransparente.png" alt="Alex Carvalho - Desenvolvedor de Software">
       </a>
     </div>
+
 
     <!-- MENU DESKTOP -->
     <nav class="menu-desktop" aria-label="Navegação principal">
       <ul>
         <li>
-          <a href="#inicio">Início</a>
+          <a href="#inicio">Início </a>
         </li>
-
         <li>
-          <a href="#especialidades">Especialidades</a>
+          <a href="#especialidades"> Especialidades </a>
         </li>
-
         <li>
-          <a href="#portfolio">Projetos</a>
+          <a href="#portfolio" > Projetos</a>
         </li>
-
         <li>
-          <a href="#sobre">Sobre mim</a>
+          <a href="#sobre"> Sobre mim </a>
         </li>
-
         <li>
-          <a href="#contato">Contato</a>
+          <a href="#contato"> Contato </a>
         </li>
       </ul>
     </nav>
 
-    <!-- BOTÃO CURRÍCULO -->
+    <!-- ÚNICO BOTÃO DE CURRÍCULO -->
     <div class="btn-contato">
-
-      <a
-        href="assets/pdf/AlexCarvalho_dev.pdf"
-        download="Alex-Carvalho-Curriculo.pdf"
-      >
+      <a href="assets/pdf/AlexCarvalho_dev.pdf" download="Alex-Carvalho-Curriculo.pdf">
         <button type="button">
           <i class="bi bi-download"></i>
           Baixar currículo
         </button>
       </a>
-
     </div>
 
     <!-- BOTÃO MENU MOBILE -->
-    <button
-      type="button"
-      class="btn-menu-hamburguer"
-      (click)="abrirMenu()"
-      aria-label="Abrir menu"
-      [attr.aria-expanded]="menuAberto"
-    >
+    <button type="button" class="btn-menu-hamburguer"
+            (click)="abrirMenu()" aria-label="Abrir menu" [attr.aria-expanded]="menuAberto">
       <i class="bi bi-list"></i>
     </button>
-
   </div>
-
 </header>
-
 
 <!-- =========================================================
      MENU MOBILE
 ========================================================= -->
-<div
-  class="menu-mobile"
-  [class.abrir-menu]="menuAberto"
->
-
+<div class="menu-mobile" [class.abrir-menu]="menuAberto">
   <!-- BOTÃO FECHAR -->
   <div class="btn-fechar">
-
-    <button
-      type="button"
-      (click)="fecharMenu()"
-      aria-label="Fechar menu"
-    >
+    <button type="button" (click)="fecharMenu()" aria-label="Fechar menu">
       <i class="bi bi-x-lg"></i>
     </button>
-
   </div>
 
   <!-- LINKS -->
   <nav aria-label="Navegação mobile">
-
     <ul>
-
       <li>
-        <a
-          href="#inicio"
-          (click)="fecharMenu()"
-        >
+        <a href="#inicio" (click)="fecharMenu()">
           Início
         </a>
       </li>
-
       <li>
-        <a
-          href="#especialidades"
-          (click)="fecharMenu()"
-        >
+        <a href="#especialidades" (click)="fecharMenu()">
           Especialidades
         </a>
       </li>
-
       <li>
-        <a
-          href="#portfolio"
-          (click)="fecharMenu()"
-        >
+        <a href="#portfolio" (click)="fecharMenu()">
           Projetos
         </a>
       </li>
-
       <li>
-        <a
-          href="#sobre"
-          (click)="fecharMenu()"
-        >
+        <a href="#sobre" (click)="fecharMenu()">
           Sobre mim
         </a>
       </li>
-
       <li>
-        <a
-          href="#contato"
-          (click)="fecharMenu()"
-        >
+        <a href="#contato" (click)="fecharMenu()">
           Contato
         </a>
       </li>
 
-      <!-- CURRÍCULO NO MOBILE -->
+      <!-- CURRÍCULO NO MENU MOBILE -->
       <li>
 
-        <a
-          href="assets/pdf/AlexCarvalhoDesenvolvedor.pdf"
-          download="Alex-Carvalho-Curriculo.pdf"
-          (click)="fecharMenu()"
-        >
+        <a href="assets/pdf/AlexCarvalho_dev.pdf" download="Alex-Carvalho-Curriculo.pdf" (click)="fecharMenu()">
           <i class="bi bi-download"></i>
           Baixar currículo
         </a>
-
       </li>
-
     </ul>
-
   </nav>
-
 </div>
 
-
 <!-- OVERLAY DO MENU MOBILE -->
-<div
-  class="overlay-menu-mobile"
-  [class.visivel]="menuAberto"
-  (click)="fecharMenu()"
-></div>
-
+<div class="overlay-menu-mobile"
+     [class.visivel]="menuAberto" (click)="fecharMenu()">
+</div>
 
 <!-- =========================================================
-     HERO / INÍCIO
+     CONTEÚDO PRINCIPAL
 ========================================================= -->
 <main>
-
-  <section
-    class="topo-site"
-    id="inicio"
-  >
-
+  <!-- =======================================================
+       HERO / INÍCIO
+  ======================================================== -->
+  <section class="topo-site" id="inicio">
     <div class="interface">
-
       <div class="universal-flex">
 
         <!-- TEXTO -->
         <div class="esquerdo-txt-topo-site">
-
           <span class="sobre-titulo">
             DESENVOLVEDOR DE SOFTWARE
           </span>
-
           <h1>
             Transformo
             <span>ideias</span>
-            em <span>soluções</span> para quem vê além do
+            em
+            <span>soluções</span>
+            para quem vê além do
             <span>código.</span>
           </h1>
-
           <p>
-            Desenvolvedor de software | Java | Spring Boot | Angular | TypeScript | SQL | PostgreSQL |
-            Docker | Analista de requisitos | Scrum | Swagger | Robot framework |
-            IA com experiência em APIs e integração de sistemas.
+            Desenvolvedor de Software com foco na construção de
+            aplicações, APIs e integrações de sistemas. Possuo
+            experiência com Java, Spring Boot, Angular, SQL e
+            PostgreSQL, além de atuação com análise de requisitos,
+            automação de processos e soluções para sistemas corporativos.
           </p>
 
-          <!-- BOTÕES -->
+          <!-- BOTÃO DE CONTATO -->
           <div class="hero-botoes">
-
-            <!-- CONTATO -->
             <a href="#contato">
-
-              <button
-                type="button"
-                class="btn-principal"
-              >
+              <button type="button" class="btn-principal">
                 Entre em contato
                 <i class="bi bi-arrow-down"></i>
               </button>
-
             </a>
-
-            <!-- CURRÍCULO -->
-            <a href="assets/pdf/AlexCarvalhoDesenvolvedor.pdf"
-              download="Alex-Carvalho-Curriculo.pdf">
-            </a>
-
           </div>
-
         </div>
-
 
         <!-- FOTO -->
         <div class="direito-img-topo-site">
-
-          <img
-            src="assets/EuBacanaTransparente.png"
-            alt="Alex Carvalho"
-          >
-
+          <img src="assets/EuBacanaTransparente.png" alt="Alex Carvalho">
         </div>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =======================================================
        ESPECIALIDADES
   ======================================================== -->
-  <section
-    class="especialidades"
-    id="especialidades"
-  >
-
+  <section class="especialidades" id="especialidades">
     <div class="interface">
-
       <span class="sobre-titulo">
         O QUE EU SEI FAZER?
       </span>
-
       <h2 class="titulo">
-        Minhas <span>especialidades.</span>
+        Minhas
+        <span>especialidades.</span>
       </h2>
-
-
       <div class="especialidades-grid">
 
         <!-- BACKEND -->
         <article class="especialidades-box">
-
-          <i class="bi bi-server"></i>
-
+          <i class="bi bi-braces-asterisk"></i>
           <h3>
             Backend
           </h3>
-
           <p>
             Desenvolvimento de APIs e aplicações backend
-            utilizando Java, Spring Boot, C# e .NET.
+            utilizando Java, Spring Boot, Dart e Flutter.
           </p>
-
           <div class="tecnologias">
-
             <span>Java</span>
             <span>Spring Boot</span>
-            <span>C#</span>
-            <span>.NET</span>
-
+            <span>Dart</span>
+            <span>Flutter</span>
           </div>
-
         </article>
-
 
         <!-- FRONTEND -->
         <article class="especialidades-box">
-
           <i class="bi bi-window-stack"></i>
-
           <h3>
             Frontend
           </h3>
-
           <p>
             Desenvolvimento de interfaces web responsivas
-            e aplicações modernas utilizando Angular e TypeScript.
+            e aplicações modernas utilizando Angular,
+            TypeScript, HTML e CSS.
           </p>
-
           <div class="tecnologias">
-
             <span>Angular</span>
             <span>TypeScript</span>
             <span>HTML</span>
             <span>CSS</span>
-
           </div>
-
         </article>
-
 
         <!-- BANCO DE DADOS -->
         <article class="especialidades-box">
-
           <i class="bi bi-database"></i>
-
           <h3>
             Banco de dados
           </h3>
-
           <p>
-            Desenvolvimento e integração de aplicações com
-            bancos relacionais e utilização de SQL para análise de dados.
+            Desenvolvimento e integração de aplicações
+            com bancos relacionais e utilização de SQL
+            para consultas e análise de dados.
           </p>
-
           <div class="tecnologias">
-
             <span>PostgreSQL</span>
             <span>MySQL</span>
             <span>H2</span>
             <span>SQL</span>
-
           </div>
-
         </article>
-
 
         <!-- INTEGRAÇÕES -->
         <article class="especialidades-box">
 
           <i class="bi bi-diagram-3"></i>
-
           <h3>
             Integrações & Automação
           </h3>
-
           <p>
             Integração entre sistemas, consumo e desenvolvimento
             de APIs e automação de processos.
           </p>
-
           <div class="tecnologias">
-
             <span>REST API</span>
             <span>RPA</span>
             <span>Swagger</span>
             <span>Postman</span>
-
+            <span>Docker</span>
           </div>
-
         </article>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =======================================================
        TECNOLOGIAS
   ======================================================== -->
   <section class="tecnologias-section">
-
     <div class="interface">
-
       <span class="sobre-titulo">
         FERRAMENTAS DE TRABALHO
       </span>
-
       <h2 class="titulo">
-        Tecnologias que <span>utilizo.</span>
+        Tecnologias que
+        <span>utilizo.</span>
       </h2>
-
 
       <div class="tecnologias-lista">
 
@@ -404,65 +275,60 @@
         <span>C#</span>
         <span>.NET</span>
         <span>Flutter</span>
+
         <span>PostgreSQL</span>
         <span>MySQL</span>
         <span>H2</span>
+        <span>SQL</span>
+
         <span>Git</span>
         <span>GitHub</span>
+
+        <span>Docker</span>
+
         <span>Swagger</span>
         <span>Postman</span>
+        <span>REST APIs</span>
+
         <span>Selenium</span>
         <span>Robot Framework</span>
+
         <span>AWS</span>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =======================================================
        PORTFOLIO
   ======================================================== -->
-  <section
-    class="portfolio"
-    id="portfolio"
-  >
-
+  <section class="portfolio" id="portfolio">
     <div class="interface">
-
       <span class="sobre-titulo">
         PROJETOS
       </span>
 
       <h2 class="titulo">
-        Meus <span>projetos.</span>
+        Meus
+        <span>projetos.</span>
       </h2>
-
-
-      <div class="portfolio-grid">
-
+      <div
+        class="portfolio-grid">
 
         <!-- PROJETO 1 -->
         <article class="projeto">
-
           <div
             class="img-port"
             style="background-image: url('assets/PrevisaoTempo.png');"
           ></div>
 
           <div class="projeto-conteudo">
-
             <h3>
               API de Previsão do Tempo
             </h3>
-
             <p>
               API desenvolvida para consulta e processamento
               de informações meteorológicas.
             </p>
-
             <div class="projeto-tags">
 
               <span>API REST</span>
@@ -470,81 +336,54 @@
               <span>Backend</span>
 
             </div>
-
-            <a
-              href="https://github.com/AlexCarvalhovisk/DesafioSimfrete"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ver projeto
+            <a href="https://github.com/AlexCarvalhovisk/DesafioSimfrete"
+               target="_blank" rel="noopener noreferrer">
+                Ver projeto
               <i class="bi bi-arrow-up-right"></i>
             </a>
-
           </div>
-
         </article>
-
 
         <!-- PROJETO 2 -->
         <article class="projeto">
-
           <div
-            class="img-port"
-            style="background-image: url('assets/CartaoVisitas.png');"
-          ></div>
-
+            class="img-port" style="background-image: url('assets/CartaoVisitas.png');">
+          </div>
           <div class="projeto-conteudo">
-
             <h3>
               API de Cartão de Visitas
             </h3>
-
             <p>
               API para gerenciamento de informações
               de cartões de visita digitais.
             </p>
-
             <div class="projeto-tags">
-
               <span>API REST</span>
               <span>Java</span>
               <span>Backend</span>
-
             </div>
-
-            <a
-              href="https://github.com/AlexCarvalhovisk/DesafioSimFreteCartaoVisitas"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://github.com/AlexCarvalhovisk/DesafioSimFreteCartaoVisitas"
+              target="_blank" rel="noopener noreferrer">
               Ver projeto
               <i class="bi bi-arrow-up-right"></i>
             </a>
-
           </div>
-
         </article>
-
 
         <!-- PROJETO 3 -->
         <article class="projeto">
-
           <div
             class="img-port"
-            style="background-image: url('assets/votacao.png');"
-          ></div>
-
+            style="background-image: url('assets/votacao.png');">
+          </div>
           <div class="projeto-conteudo">
-
             <h3>
               API de Votação Eletrônica
             </h3>
-
             <p>
               API para gerenciamento de processos
               de votação eletrônica.
             </p>
-
             <div class="projeto-tags">
 
               <span>API REST</span>
@@ -552,41 +391,24 @@
               <span>Backend</span>
 
             </div>
-
-            <a
-              href="https://github.com/AlexCarvalhovisk/desafioNtconsult"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://github.com/AlexCarvalhovisk/desafioNtconsult" target="_blank"
+              rel="noopener noreferrer">
               Ver projeto
               <i class="bi bi-arrow-up-right"></i>
             </a>
-
           </div>
-
         </article>
-
       </div>
-
 
       <!-- GITHUB -->
       <div class="github-link">
-
-        <a
-          href="https://github.com/AlexCarvalhovisk"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/AlexCarvalhovisk" target="_blank" rel="noopener noreferrer">
           Ver todos os projetos no GitHub
           <i class="bi bi-github"></i>
         </a>
-
       </div>
-
     </div>
-
   </section>
-
 
   <!-- =======================================================
        SOBRE MIM
@@ -619,15 +441,18 @@
             SOBRE MIM
           </span>
 
+
           <h2>
             Muito prazer, sou
             <span>Alex Carvalho.</span>
           </h2>
 
+
           <p>
             Sou graduado em Análise e Desenvolvimento de Sistemas
             pelo Instituto Federal do Rio Grande do Sul (IFRS).
           </p>
+
 
           <p>
             Tenho experiência e conhecimentos em desenvolvimento
@@ -635,11 +460,13 @@
             dados e modernização de aplicações.
           </p>
 
+
           <p>
             Minha principal atuação está voltada ao desenvolvimento
-            backend com Java e Spring Boot, além de conhecimentos em
-            Angular, .NET, Flutter, testes automatizados e soluções
-            em nuvem.
+            backend com Java e Spring Boot, além de conhecimentos
+            em TypeScript, Angular, SQL, PostgreSQL, Docker, Análise de requisitos,
+            Scrum, Swagger, testes automatizados, IA com experiência em APIs RestFull e
+            soluções em nuvem.
           </p>
 
 
@@ -650,7 +477,7 @@
               href="https://www.linkedin.com/in/alexcarvalhovisk/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
+              aria-label="Acessar LinkedIn de Alex Carvalho"
             >
               <button type="button">
                 <i class="bi bi-linkedin"></i>
@@ -662,7 +489,7 @@
               href="https://github.com/AlexCarvalhovisk"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub"
+              aria-label="Acessar GitHub de Alex Carvalho"
             >
               <button type="button">
                 <i class="bi bi-github"></i>
@@ -694,9 +521,13 @@
         CONTATO
       </span>
 
+
       <h2 class="titulo">
-        <span>Tchê,</span> fala <span>comigo!</span>
+        <span>Tchê,</span>
+        fala
+        <span>comigo!</span>
       </h2>
+
 
       <p class="descricao-contato">
         Tem uma ideia, projeto ou oportunidade?
@@ -710,6 +541,7 @@
         (ngSubmit)="enviarFormulario(contatoForm)"
         novalidate
       >
+
 
         <!-- NOME -->
         <input
@@ -808,9 +640,7 @@
             [class.erro]="!envioSucesso"
             role="alert"
           >
-
             {{ mensagemStatus }}
-
           </div>
 
         }
@@ -858,9 +688,14 @@
 
     <div class="footer-conteudo">
 
+
+      <!-- LOGO -->
       <div class="logo">
 
-        <a href="#inicio">
+        <a
+          href="#inicio"
+          aria-label="Voltar para o início"
+        >
 
           <img
             src="assets/EuBacanaTransparente.png"
@@ -872,14 +707,18 @@
       </div>
 
 
+      <!-- DESCRIÇÃO -->
       <p>
-        Desenvolvedor de Software focado em criar
-        soluções através da tecnologia.
+        Desenvolvedor de Software focado na criação
+        de soluções através da tecnologia.
       </p>
 
 
+      <!-- LINKS -->
       <div class="footer-links">
 
+
+        <!-- E-MAIL -->
         <a
           href="mailto:alexcarvalhovisk@gmail.com"
         >
@@ -887,6 +726,8 @@
           E-mail
         </a>
 
+
+        <!-- GITHUB -->
         <a
           href="https://github.com/AlexCarvalhovisk"
           target="_blank"
@@ -896,6 +737,8 @@
           GitHub
         </a>
 
+
+        <!-- LINKEDIN -->
         <a
           href="https://www.linkedin.com/in/alexcarvalhovisk/"
           target="_blank"
@@ -905,15 +748,29 @@
           LinkedIn
         </a>
 
+
+        <!-- WHATSAPP -->
+        <a
+          class="footer-whatsapp"
+          href="https://wa.me/SEU_NUMERO_AQUI"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-whatsapp"></i>
+          WhatsApp
+        </a>
+
       </div>
 
     </div>
 
 
+    <!-- COPYRIGHT -->
     <div class="footer-copy">
 
       <p>
-        © {{ currentYear }} Alex Carvalho. Todos os direitos reservados.
+        © {{ currentYear }} Alex Carvalho.
+        Todos os direitos reservados.
       </p>
 
     </div>
@@ -925,10 +782,11 @@
 
 <!-- =========================================================
      WHATSAPP FLUTUANTE
+     APARECE APENAS EM TABLET/DESKTOP
 ========================================================= -->
 <a
   class="icon-link"
-  href="https://wa.me/"
+  href="https://wa.me/5551989027913?text=Olá%20Alex!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Entrar em contato pelo WhatsApp"
