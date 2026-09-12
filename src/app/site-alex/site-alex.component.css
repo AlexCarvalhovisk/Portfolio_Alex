@@ -839,6 +839,12 @@ footer {
   color: darkorange;
 }
 
+/* Em telas maiores o botão flutuante já cobre o WhatsApp,
+   então o link do rodapé fica escondido */
+.footer-links a.footer-whatsapp {
+  display: none;
+}
+
 .footer-copy {
   padding-top: 25px;
   text-align: center;
@@ -1100,6 +1106,18 @@ footer {
 
   .footer-links {
     justify-content: center;
+  }
+
+
+  /* WHATSAPP FLUTUANTE - ESCONDER EM TABLET/MOBILE */
+
+  .icon-link {
+    display: none;
+  }
+
+  /* Nesses dispositivos, o link do rodapé volta a aparecer */
+  .footer-links a.footer-whatsapp {
+    display: flex;
   }
 }
 
